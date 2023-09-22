@@ -1,0 +1,16 @@
+<div class="main-input-container">
+  <div [formGroup]="listForm" class="card-container">
+    <mat-form-field class="card-input" appearance="fill">
+      <mat-label>RU</mat-label>
+      <input matInput type="text" formControlName="ru">
+    </mat-form-field>
+    <mat-form-field class="card-input" appearance="fill">
+      <mat-label>EN</mat-label>
+      <input matInput type="text" formControlName="en">
+    </mat-form-field>
+  </div>
+</div>
+<div class="button-group">
+  <button mat-raised-button class="save-button" (click)="updateCard()">Обновить</button>
+  <button mat-raised-button class="cancel-button" (click)="cancelUpdate()">Отмена</button>
+</div>

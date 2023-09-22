@@ -1,0 +1,26 @@
+@mixin main-contaner {
+  .main-container {
+    width: 800px;
+    margin: 10px auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    margin: 5px;
+    width: 400px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+  }
+};
+
+@mixin app-card-list-component-styles {
+  @include main-contaner();
+}

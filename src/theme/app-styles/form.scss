@@ -1,0 +1,52 @@
+@mixin card-form() {
+  .card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .main-input-container {
+    margin-top: 50px;
+  }
+  
+  .card-input {
+    width: 330px;
+  }
+}
+
+@mixin check-form-style {
+  .check-form-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .check-input {
+    width: 700px;
+  }
+
+  .check-form-button {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@mixin card-form-buttons {
+  .button-group {
+    width: 800px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .cancel-button {
+    margin-left: 10px;
+  }
+}
+
+@mixin app-form-styles {
+  @include card-form();
+  @include card-form-buttons();
+  @include check-form-style();
+}

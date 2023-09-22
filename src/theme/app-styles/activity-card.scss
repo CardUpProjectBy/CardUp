@@ -1,0 +1,42 @@
+@mixin activity-card {
+  .activity-card {
+    width: 700px;
+    height: 300px;
+    margin: 10px auto;
+  }
+
+  .activity-current-word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 700px;
+    height: 185px;
+
+    font-size: 2rem;
+  }
+
+  .activity-result-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 700px;
+    height: 185px;
+  }
+
+  .activity-result-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 700px;
+    height: 185px;
+
+    font-size: 3rem;
+  }
+}
+
+@mixin app-activity-styles {
+  @include activity-card();
+}

@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+@import './palettes.scss';
+@import './app-styles/form.scss'; // form
+@import './app-styles//card-list-component.scss'; //card-list
+@import './app-styles//activity-card.scss'; //activity-card
+
+$primary: mat.define-palette($primary-palette, 500);
+$secondary: mat.define-palette($accent-palette);
+
+$app-theme: mat.define-light-theme((
+ color: (
+   primary: $primary,
+   accent: $secondary,
+ )
+));
+
+@include mat.all-component-themes($app-theme);
+
+@include app-form-styles(); // form
+@include app-card-list-component-styles(); // card-list
+@include app-activity-styles();  //activity-card

@@ -1,0 +1,19 @@
+<div *ngIf="!stopActivity" class="activity-card">
+  <div *ngFor="let card of cardList">
+    <div class="activity-current-word">{{ card.ru }}</div>
+    <div class="check-form-container">
+      <div [formGroup]="checkForm">
+        <mat-form-field class="check-input" appearance="fill">
+          <input matInput type="text" formControlName="check">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="check-form-button">
+      <button mat-raised-button (click)="nextWord(card)">Next</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="stopActivity" class="activity-card">
+  <h2 class="activity-result-title">Результат</h2>
+  <div class="activity-result-count">{{ result() }} / {{ cardListLength }}</div>
+</div>
